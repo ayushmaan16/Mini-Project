@@ -1,6 +1,6 @@
 # Video Conferencing App
 A full-featured Video Conferencing Web Application built to provide a smooth, secure, and modern online meeting experience.
-Users can sign up and log in to access the platform, join or create meetings, communicate in real time, and use additional premium features like payments, live translation, and meeting recording.
+Users can sign up and log in to access the platform, join or create meetings, communicate in real time, and use additional premium features like payments,and meeting recording.
 
 This project focuses on building a real-world conferencing system with important features used in professional meeting platforms.
 # Features
@@ -18,12 +18,6 @@ Razorpay payment gateway added for premium access
 
 Smooth and secure payment process
 
-### Live Translation
-
-Supports real-time translation during meetings
-
-Helps users communicate across different languages
-
 ### Meeting Recording
 
 Users can record meetings
@@ -38,8 +32,6 @@ Ensure secure user authentication
 
 Add payment support using Razorpay
 
-Improve accessibility using live translation
-
 Allow users to store and revisit meetings through recordings
 
 # Team Members & Work
@@ -51,5 +43,6 @@ UI/UX	- Arushi Modi
 
 Documentation	- Kashish Rajawat
 
+Payment Gateway Inplementation- Sanskar Varshney
 # License
 This project is for educational and learning purposes.
