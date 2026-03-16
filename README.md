@@ -43,6 +43,6 @@ UI/UX	- Arushi Modi
 
 Documentation	- Kashish Rajawat
 
-Payment Gateway Inplementation- Sanskar Varshney
+Payment Gateway Implementation- Sanskar Varshney
 # License
 This project is for educational and learning purposes.
