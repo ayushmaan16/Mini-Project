@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useState, useEffect, useRef } from 'react';
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate, useParams } from 'react-router-dom';
@@ -27,7 +27,7 @@ import "@livekit/components-styles";
 import { Track } from "livekit-client";
 import axios from 'axios';
 
-// ... ParticipantsPanel component remains the same ...
+
 
 const VideoChat = ({ video, audio, roomId: propRoomId, user: propUser }) => {
   const { currentUser } = useAuth(); // Changed 'user' to 'currentUser' to match your AuthContext
@@ -51,7 +51,7 @@ const VideoChat = ({ video, audio, roomId: propRoomId, user: propUser }) => {
   const activeUser = propUser || currentUser;
 
   useEffect(() => {
-    // 🛑 CRITICAL FIX: Only run if we have both the user name and room ID
+  
     if (!activeUser?.name || !activeRoomId) {
         console.log("Waiting for user data or roomId...");
         return;
@@ -61,7 +61,7 @@ const VideoChat = ({ video, audio, roomId: propRoomId, user: propUser }) => {
       try {
         const authToken = localStorage.getItem("authToken");
         
-        // Ensure the URL is constructed correctly
+      
         const url = `${API_URL}/api/livekit/token`;
         
         const resp = await axios.get(url, {
@@ -83,7 +83,7 @@ const VideoChat = ({ video, audio, roomId: propRoomId, user: propUser }) => {
     fetchToken();
   }, [activeUser?.name, activeRoomId, API_URL]);
 
-  // --- RECORDING FUNCTIONALITY ---
+
 
   const startRecording = async () => {
     try {
@@ -104,7 +104,7 @@ const VideoChat = ({ video, audio, roomId: propRoomId, user: propUser }) => {
 
       mediaRecorder.onstop = () => {
         saveRecording();
-        // Stop all tracks to turn off the "screen sharing" indicator
+       
         stream.getTracks().forEach(track => track.stop());
       };
 
@@ -148,13 +148,13 @@ const VideoChat = ({ video, audio, roomId: propRoomId, user: propUser }) => {
     }
   };
 
-  // --- END RECORDING FUNCTIONALITY ---
+  
 
   const onLeave = () => {
     navigate('/dashboard'); // Better to navigate to dashboard than home
   };
 
-  // ... start/stop recording functions remain same ...
+
 
   // This component is responsible for rendering the actual video grid
 function MyVideoConference() {
